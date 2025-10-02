@@ -6,15 +6,16 @@ export default defineConfig(({ command, mode }) => {
   const isProduction = mode === 'production';
   
   return {
-    base: isProduction ? '/' : '/',
+    base: isProduction ? './' : '/',
     plugins: [react()],
     server: {
       port: 3000,
       open: true,
     },
     preview: {
-      port: 3000,
+      port: 5000,
       strictPort: true,
+      host: true,
     },
     build: {
       outDir: 'dist',
