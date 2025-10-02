@@ -88,5 +88,6 @@
     |-- index.css
     |-- index.js
     |-- main.jsx
+|-- vercel.json
 |-- vite-env.d.ts
 |-- vite.config.js
