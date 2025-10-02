@@ -1,17 +1,12 @@
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
-  // Load env file based on `mode` in the current directory.
-  const env = loadEnv(mode, process.cwd(), '');
+  const isProduction = mode === 'production';
   
   return {
-    base: command === 'serve' ? '/' : '/',
-    define: {
-      'process.env': { ...process.env, ...env }
-    },
+    base: isProduction ? '/' : '/',
     plugins: [react()],
     server: {
       port: 3000,
@@ -22,7 +17,7 @@ export default defineConfig(({ command, mode }) => {
       strictPort: true,
     },
     build: {
-      outDir: 'build',
+      outDir: 'dist',
       emptyOutDir: true,
       sourcemap: true,
       rollupOptions: {
@@ -37,14 +32,6 @@ export default defineConfig(({ command, mode }) => {
       alias: {
         '@': path.resolve(__dirname, './src'),
       },
-    },
-    test: {
-      globals: true,
-      environment: 'jsdom',
-      setupFiles: './src/setupTests.js',
-      coverage: {
-        reporter: ['text', 'json', 'html'],
-      },
-    },
+    }
   };
 });
