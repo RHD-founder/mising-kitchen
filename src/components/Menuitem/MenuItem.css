@@ -1,0 +1,255 @@
+.app__menuitem {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+    border-bottom: 1px dashed rgba(220, 202, 135, 0.15);
+    animation: fadeIn 0.4s ease-out forwards;
+    opacity: 0;
+}
+
+.app__menuitem:last-child {
+    border-bottom: none;
+}
+
+.app__menuitem-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.app__menuitem-details {
+    flex: 1;
+    min-width: 0; /* Prevents flex item from overflowing */
+}
+
+.app__menuitem-title {
+    color: var(--color-golden);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+    margin: 0 0 0.25rem 0;
+    font-family: var(--font-base);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.app__menuitem-tags {
+    color: var(--color-grey);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.app__menuitem-price {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    font-weight: 700;
+    white-space: nowrap;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(220, 202, 135, 0.3);
+    margin-left: 0.5rem;
+    min-width: 60px;
+    text-align: right;
+}
+
+/* Hover effects */
+.app__menuitem:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.app__menuitem:hover .app__menuitem-title,
+.app__menuitem:hover .app__menuitem-price {
+    color: var(--color-golden);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .app__menuitem {
+        padding: 0.75rem 0;
+    }
+    
+    .app__menuitem-content {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .app__menuitem-price {
+        padding-left: 0;
+        border-left: none;
+        margin-left: 0;
+        text-align: left;
+        width: 100%;
+        padding-top: 0.25rem;
+        border-top: 1px dashed rgba(220, 202, 135, 0.15);
+    }
+}
+
+.app__menuitem-name h3 {
+    color: var(--color-golden);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+    margin: 0;
+    font-family: var(--font-base);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.app__menuitem-sub {
+    width: 100%;
+    margin-top: 0.5rem;
+    color: var(--color-grey);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.app__menuitem-sub p {
+    margin: 0;
+    color: var(--color-grey);
+    font-style: italic;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.app__menuitem-dash {
+    flex: 0 0 1.5rem;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(220, 202, 135, 0.4) 20%, 
+        rgba(220, 202, 135, 0.7) 50%, 
+        rgba(220, 202, 135, 0.4) 80%, 
+        transparent 100%);
+    margin: 0 1rem;
+    position: relative;
+    top: 2px;
+    transition: all 0.3s ease;
+}
+
+.app__menuitem:hover .app__menuitem-dash {
+    flex: 0 0 2rem;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--color-golden) 50%, 
+        transparent 100%);
+}
+
+.app__menuitem-price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--color-golden);
+    font-size: 1.1rem;
+    font-weight: 700;
+    white-space: nowrap;
+    font-family: var(--font-base);
+    min-width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.app__menuitem:hover .app__menuitem-price {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(220, 202, 135, 0.7);
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(8px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1150px) {
+    .app__menuitem {
+        margin: 0.6rem 0;
+        padding: 1rem 1.25rem;
+    }
+    
+    .app__menuitem-name h3 {
+        font-size: 1.05rem;
+    }
+    
+    .app__menuitem-sub p {
+        font-size: 0.85rem;
+    }
+    
+    .app__menuitem-price {
+        font-size: 1.05rem;
+    }
+    
+    .app__menuitem-dash {
+        flex: 0 0 1rem;
+        margin: 0 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .app__menuitem {
+        padding: 0.9rem 1rem;
+        margin: 0.5rem 0;
+    }
+    
+    .app__menuitem-name h3 {
+        font-size: 1rem;
+        white-space: normal;
+    }
+    
+    .app__menuitem-price {
+        font-size: 1rem;
+    }
+    
+    .app__menuitem-sub p {
+        font-size: 0.8rem;
+    }
+    
+    .app__menuitem-dash {
+        display: none;
+    }
+    
+    .app__menuitem-head {
+        flex-wrap: wrap;
+    }
+    
+    .app__menuitem-price {
+        margin-top: 0.3rem;
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .app__menuitem {
+        padding: 0.8rem;
+    }
+    
+    .app__menuitem-name h3 {
+        font-size: 0.95rem;
+    }
+    
+    .app__menuitem-sub p {
+        font-size: 0.78rem;
+    }
+}

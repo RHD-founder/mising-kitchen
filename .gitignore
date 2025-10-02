@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Build output
+/build
+/coverage
+/dist
+/dist-ssr
+
+# Environment variables
+.env
+.env.*.local
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vite cache
+.cache/
+.temp/
