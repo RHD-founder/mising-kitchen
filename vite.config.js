@@ -2,11 +2,9 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
-export default defineConfig(({ command, mode }) => {
-  const isProduction = mode === 'production';
-  
+export default defineConfig(({ mode }) => {
   return {
-    base: isProduction ? './' : '/',
+    base: './',
     plugins: [react()],
     server: {
       port: 3000,
@@ -26,8 +24,12 @@ export default defineConfig(({ command, mode }) => {
           manualChunks: {
             react: ['react', 'react-dom'],
           },
+          entryFileNames: 'assets/[name].[hash].js',
+          chunkFileNames: 'assets/[name].[hash].js',
+          assetFileNames: 'assets/[name].[hash][extname]',
         },
       },
+      assetsInlineLimit: 0, // This ensures all assets are emitted as files
     },
     resolve: {
       alias: {
