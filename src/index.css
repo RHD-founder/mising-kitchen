@@ -1,15 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
+  /* Fonts */
   --font-base: 'Cormorant Upright', serif;
   --font-alt: 'Open Sans', sans-serif;
   
-  --color-golden: #DCCA87;
-  --color-black: #0C0C0C;
-  --color-gray: #545454;
-  --color-crimson: #F5EFDB;
-  --color-grey: #AAAAAA;
-  --color-white: #FFFFFF;
+  /* Modern Green Color Palette */
+  --color-primary: #1a5f2b;     /* Deep Forest Green */
+  --color-primary-light: #2e8b57; /* Sea Green */
+  --color-accent: #50c878;      /* Emerald Green */
+  --color-accent-light: #90ee90; /* Light Green */
+  --color-golden: #d4af37;      /* Gold accent */
+  
+  /* Neutral Colors */
+  --color-black: #0a1e0f;       /* Almost black with green tint */
+  --color-dark: #1e3b2a;        /* Dark green-gray */
+  --color-gray: #a9b8b1;        /* Muted green-gray */
+  --color-light: #e8f5e9;       /* Very light green */
+  --color-white: #ffffff;       /* Pure white */
+  
+  /* Backgrounds */
+  --color-bg: #f8f9f8;         /* Off-white background */
+  --color-overlay: rgba(10, 30, 15, 0.9); /* Dark overlay */
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  --gradient-light: linear-gradient(135deg, var(--color-light) 0%, var(--color-white) 100%);
+  --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f5d76e 100%);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  
+  /* Transitions */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
 }
 
 * {
@@ -17,6 +48,25 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+}
+
+body, html {
+  background-color: #0a1e0f;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: var(--font-alt, "Open Sans", sans-serif);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {

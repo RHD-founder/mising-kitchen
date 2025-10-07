@@ -3,25 +3,22 @@
 }
 
 .flex__center {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .app__bg {
-  background: url('./assets/bg.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat;
-  background-attachment: fixed;
+  /* Background properties are now handled by individual components */
+  background: none !important;
+  background-color: transparent !important;
 }
 
 .app__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   min-height: 100vh;
+  width: 100%;
 }
 
 .app__wrapper_info {

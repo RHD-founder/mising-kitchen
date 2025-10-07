@@ -10,6 +10,8 @@ import menu from '../assets/menu.png';
 import overlaybg from '../assets/overlaybg.png';
 import spoon from '../assets/spoon.svg';
 import welcome from '../assets/welcome.png';
+// import wc from '../assets/wc.webp';
+import wc from '../assets/wc.png';
 import findus from '../assets/findus.png';
 import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
@@ -32,4 +34,5 @@ export default {
   sign,
   quote,
   gericht,
+  wc,
 };

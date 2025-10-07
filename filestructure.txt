@@ -35,11 +35,22 @@
         |-- logo.png
         |-- meal.mp4
         |-- menu.png
+        |-- new_assets
+            |-- th1.webp
+            |-- th2.webp
+            |-- th3.webp
+            |-- th4.webp
+            |-- th5.webp
+            |-- th6.webp
+            |-- th7.webp
+            |-- th8.webp
         |-- overlaybg.png
         |-- quote.png
         |-- sign.png
         |-- spoon.png
         |-- spoon.svg
+        |-- wc.png
+        |-- wc.webp
         |-- welcome.png
     |-- components
         |-- Footer
@@ -58,6 +69,7 @@
             |-- SubHeading.jsx
     |-- constants
         |-- data.js
+        |-- galleryImages.js
         |-- images.js
         |-- index.js
     |-- container
@@ -68,6 +80,7 @@
             |-- Chef.css
             |-- Chef.jsx
         |-- Findus
+            |-- FindUs.css
             |-- FindUs.jsx
         |-- Footer
             |-- Footer.css
