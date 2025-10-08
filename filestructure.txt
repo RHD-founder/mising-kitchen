@@ -23,6 +23,7 @@
         |-- award05.png
         |-- bg.png
         |-- chef.png
+        |-- find.svg
         |-- findus.png
         |-- G.png
         |-- gallery01.png
@@ -50,6 +51,7 @@
         |-- spoon.png
         |-- spoon.svg
         |-- wc.png
+        |-- wc.svg
         |-- wc.webp
         |-- welcome.png
     |-- components
