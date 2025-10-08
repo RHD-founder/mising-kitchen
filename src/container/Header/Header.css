@@ -1,5 +1,24 @@
 .app__header {
-    background-color: var(--color-black);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.app__wrapper {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.app__wrapper_img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__wrapper_img img {
+    width: 80%;
 }
 
 .app__header-h1 {
@@ -10,6 +29,8 @@
     text-transform: capitalize;
     line-height: 117px;
     font-size: 90px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 2rem 0;
 }
 
 .app__header-img img {

@@ -23,6 +23,7 @@
         |-- award05.png
         |-- bg.png
         |-- chef.png
+        |-- DSC_2370.jpg
         |-- find.svg
         |-- findus.png
         |-- G.png
@@ -31,6 +32,7 @@
         |-- gallery03.png
         |-- gallery04.png
         |-- gericht.png
+        |-- hero.jpg
         |-- knife.png
         |-- laurels.png
         |-- logo.png
