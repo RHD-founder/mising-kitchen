@@ -141,9 +141,9 @@ const Footer = () => {
           <h2 style={{ ...headingStyle, textAlign: 'center' }}>Working Hours</h2>
           <div style={{ maxWidth: '300px', margin: '0 auto' }}>
           <p style={textStyle}><strong>Monday-Friday:</strong></p>
-          <p style={textStyle}>08:00 am - 12:00 am</p>
+          <p style={textStyle}>08:00 am - 10:45 pm</p>
           <p style={{ ...textStyle, marginTop: '1rem' }}><strong>Saturday-Sunday:</strong></p>
-          <p style={textStyle}>07:00 am - 11:00 pm</p>
+          <p style={textStyle}>08:00 am - 10:45 pm</p>
           </div>
         </div>
       </div>
